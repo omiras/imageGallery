@@ -1,0 +1,30 @@
+<%- include('includes/head.ejs') %>
+
+</head>
+<body>
+    <%- include('includes/navigation.ejs') %>
+
+<main>
+    <h1 class="w3-content">Añadir imagen nueva</h1>
+    <div class="w3-row w3-section">
+    <form class="w3-content" method="POST">
+        <label for="imageURL">Título</label>
+        <input class="w3-input" type="text" id="imageName" name="imageName" required maxlength="10" pattern="\w+"></p>
+        <label for="imageURL">Url de la imagen</label>
+        <input class="w3-input" type="url" id="imageURL" name="imageURL" required></p>
+        <label for="date"></label>
+        <input class="w3-input" type="date" name="date" id="date" required>
+        <input class="w3-input" type="submit">
+      </form>
+    </div>
+    <div class="w3-content w3-red">
+        <% if (error) { %>
+            <h2><%= error %></h2>
+          <% } %>
+    </div>
+
+  
+      
+</main>
+</body>
+</html>
